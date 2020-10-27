@@ -30,10 +30,12 @@ protected:
 signals:
 
 private:
+    QPointF compute_astroid(float t);
 
     QColor mBackgroundColor;
     QColor mShapeColor;
     ShapeType mShape;
+
 };
 
 #endif // RENDERAREA_H
