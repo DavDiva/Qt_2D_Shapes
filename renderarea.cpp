@@ -3,8 +3,8 @@
 #include <math.h>
 
 RenderArea::RenderArea(QWidget *parent) : QWidget(parent),
-    mBackgroundColor(0,0,255),
-    mShapeColor(255,255,255),
+    mBackgroundColor(255,170,255),
+    mShapeColor(QColorConstants::Color1),
     mShape(Astroid)
 {
     on_shape_changed();
@@ -12,11 +12,11 @@ RenderArea::RenderArea(QWidget *parent) : QWidget(parent),
 
 QSize RenderArea::minimumSizeHint() const
 {
-    return QSize(100,100);
+    return QSize(400,400);
 }
 QSize RenderArea::sizeHint() const
 {
-    return QSize(400,200);
+    return QSize(900,900);
 }
 
 void RenderArea::on_shape_changed()

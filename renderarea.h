@@ -20,10 +20,20 @@ public:
         mBackgroundColor = color;
     } //setter
 
-    QColor backgroundColor() const
+    QColor getBackgroundColor() const
     {
         return mBackgroundColor;
     } //getter
+
+    void setShapeColor(QColor color)
+    {
+        mShapeColor = color;
+    }
+
+    QColor getShapeColor() const
+    {
+        return mShapeColor;
+    }
 
     void setShape(ShapeType shape)
     {
