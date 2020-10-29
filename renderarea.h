@@ -45,6 +45,25 @@ public:
         return mScale;
     }
 
+    void setInterval(float interval)
+    {
+        mIntervalLength = interval;
+        repaint();
+    }
+    float getInterval() const
+    {
+        return mIntervalLength;
+    }
+
+    void setStepCount(int count)
+    {
+        mStepCount = count;
+        repaint();
+    }
+    int getStepCount() const
+    {
+        return mStepCount;
+    }
 
 
 protected:

@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->ui->spinScale->setValue(this->ui->renderArea->getScale());
+    update_ui();
 }
 
 
@@ -19,6 +19,8 @@ MainWindow::~MainWindow()
 void MainWindow::update_ui()
 {
     this->ui->spinScale->setValue(this->ui->renderArea->getScale());
+    this->ui->spinInterval->setValue(this->ui->renderArea->getInterval());
+    this->ui->spinCount->setValue(this->ui->renderArea->getStepCount());
 }
 void MainWindow::on_btnAstroid_clicked()
 {
@@ -64,4 +66,14 @@ void MainWindow::on_btnLine_clicked()
 void MainWindow::on_spinScale_valueChanged(double scale)
 {
     this->ui->renderArea->setScale(scale);
+}
+
+void MainWindow::on_spinInterval_valueChanged(double interval)
+{
+    this->ui->renderArea->setInterval(interval);
+}
+
+void MainWindow::on_spinCount_valueChanged(int count)
+{
+    this->ui->renderArea->setStepCount(count);
 }
